@@ -1,0 +1,11 @@
+[
+  {
+    "ProductID": 1,
+    "ProductName": "TEST01",
+    "ProductDescription": "TEST01",
+    "ProductCategory": "TEST01",
+    "ProductManufacturer": "TEST01",
+    "ProductSupplier": "TEST01",
+    "ProductPrice": 100.00
+  }
+]

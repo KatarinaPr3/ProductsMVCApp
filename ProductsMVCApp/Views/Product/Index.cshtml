@@ -1,8 +1,13 @@
 ﻿@model System.Data.DataTable
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Products DB";
 }
-
+<br />
+<br />
+<h1>Products from Database</h1>
+<br />
+<br />
+<br />
 <table class="table table-bordered table-striped">
     <tr>
         <th>Product ID</th>
@@ -12,6 +17,9 @@
         <th>Product Manufacturer</th>
         <th>Product Supplier</th>
         <th>Product Price</th>
+        <th></th>
+        <th></th>
+
     </tr>
     @for (int i = 0; i < Model.Rows.Count; i++)
     {
@@ -23,8 +31,14 @@
             <td>@Model.Rows[i][4]</td>
             <td>@Model.Rows[i][5]</td>
             <td>@Model.Rows[i][6]</td>
+            <td>
+                <a href="@Url.Action("Edit", "Product", new { @id = Model.Rows[i][0]})">Edit</a>
+            </td>
+            <td>
+                <a href="@Url.Action("Delete", "Product", new { @id = Model.Rows[i][0]})">Delete</a>
+            </td>
 
         </tr>
     }
 </table>
-
+<a href="@Url.Action("Create", "Product")">Add Product</a>
